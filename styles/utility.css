@@ -1,0 +1,7 @@
+.desktop-only {
+  display: none;
+}
+
+.px-md {
+  padding-block: var(--px-md);
+}
