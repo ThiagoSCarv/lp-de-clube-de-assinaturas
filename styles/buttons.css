@@ -14,7 +14,6 @@
   &::after {
     content: attr(aria-label);
     color: var(--text-title);
-    font-family: "Raleway", sans-serif;
     font-weight: var(--fw-bold);
     font-size: var(--button);
     position: relative;
@@ -64,6 +63,8 @@
 
 .btn-md {
   max-width: 5.56rem;
+  max-height: 2.5rem;
+  padding-inline: 1.25rem;
 }
 
 .btn-lg {

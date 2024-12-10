@@ -2,6 +2,19 @@
   display: none;
 }
 
+.mobile-only {
+  display: initial;
+}
+
 .px-md {
-  padding-block: var(--px-md);
+  padding-inline: var(--px-md);
+}
+
+@media (width >= 90em) {
+  .desktop-only {
+    display: initial;
+  }
+  .mobile-only {
+    display: none;
+  }
 }

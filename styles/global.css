@@ -43,11 +43,12 @@ body {
   max-width: 375px;
   margin-inline: auto;
   background-color: var(--shape-background);
+  font-family: var(--ff-raleway);
 }
 
-@media (width >= 80em) {
+@media (width >= 90em) {
   body {
-    max-width: 80rem;
+    max-width: 90rem;
   }
   :root {
     --title-lg: 3rem;
@@ -55,6 +56,7 @@ body {
     --subtitle: 2rem;
     --title-sm: 2rem;
     --body-md: 1rem;
+    --body-sm: 1.25rem;
     --px-md: 10rem;
   }
 }
