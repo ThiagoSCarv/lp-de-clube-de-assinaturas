@@ -1,0 +1,108 @@
+.hero-content {
+  position: relative;
+  padding-block: 5.125rem;
+  & img {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    object-fit: cover;
+  }
+  & p {
+    color: var(--text-label);
+    font-size: var(--subtitle);
+    font-weight: var(--fw-medium);
+    letter-spacing: 140%;
+    text-align: center;
+    & strong {
+      font-weight: var(--fw-medium);
+      & b {
+        font-weight: var(--fw-medium);
+      }
+    }
+  }
+  & img[src*="spellbook"] {
+    position: absolute;
+    left: 252px;
+    top: 35px;
+    transform: rotate(15deg);
+    opacity: 0;
+    transition: all 1s;
+  }
+  & img[src*="ouija"] {
+    position: absolute;
+    left: 14px;
+    bottom: 50px;
+    transform: rotate(-25deg);
+    opacity: 0;
+    transition: all 1s;
+  }
+  & img[src*="ball"] {
+    position: absolute;
+    left: 306px;
+    bottom: 40px;
+    transform: rotate(15deg);
+    opacity: 0;
+    transition: all 1s;
+  }
+  &:hover {
+    & img[src*="spellbook"] {
+      animation: appear 1.5s both;
+      &:hover {
+        transform: rotate(30deg);
+        scale: 1.1;
+      }
+    }
+    & img[src*="ouija"] {
+      animation: appear 1.5s 700ms both;
+      &:hover {
+        transform: rotate(5deg);
+        scale: 1.1;
+      }
+    }
+    & img[src*="ball"] {
+      animation: appear 1.5s 1400ms both;
+      &:hover {
+        transform: rotate(30deg);
+        scale: 1.1;
+      }
+    }
+    & p {
+      & strong:nth-child(1) {
+        animation: color-transition-white 1.5s both;
+        & b {
+          animation: color-transition-blue 1.5s both;
+        }
+      }
+      & strong:nth-child(2) {
+        animation: color-transition-white 1.5s 700ms both;
+        & b {
+          animation: color-transition-blue 1.5s 700ms both;
+        }
+      }
+      & strong:nth-child(3) {
+        animation: color-transition-white 1.5s 1400ms both;
+        & b {
+          animation: color-transition-blue 1.5s 1400ms both;
+        }
+      }
+    }
+  }
+}
+
+@keyframes color-transition-white {
+  to {
+    color: var(--text-body);
+  }
+}
+
+@keyframes color-transition-blue {
+  to {
+    color: var(--blue-light);
+    font-weight: var(--fw-bold);
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
