@@ -1,7 +1,7 @@
 header {
   height: 29rem;
   position: relative;
-  & .hero {
+  & .background {
     background: url(../assets/hero/hero-background-mobile.png);
     background-repeat: no-repeat;
     padding: 0;
@@ -45,7 +45,7 @@ header {
 @media (width >= 90em) {
   header {
     height: 60rem;
-    & .hero {
+    & .background {
       background: url(../assets/hero/hero-background.png);
       background-repeat: no-repeat;
     }
