@@ -29,15 +29,15 @@
   }
   &::before {
     content: "";
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     border-radius: 80%;
 
     background: var(--pink-base);
     position: absolute;
     z-index: 0;
     scale: 0;
-    transition: scale 500ms;
+    transition: scale 1s;
   }
 }
 
@@ -48,15 +48,15 @@
   }
   &::before {
     content: "";
-    width: 210px;
-    height: 210px;
+    width: 250px;
+    height: 250px;
     border-radius: 80%;
 
     background: var(--blue-mid);
     position: absolute;
     z-index: 0;
     scale: 0;
-    transition: scale 500ms;
+    transition: scale 1s;
   }
 }
 
@@ -68,5 +68,5 @@
 }
 
 .btn-lg {
-  max-width: 13rem;
+  width: 100%;
 }

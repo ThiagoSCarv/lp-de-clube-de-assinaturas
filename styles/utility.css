@@ -10,6 +10,22 @@
   padding-inline: var(--px-md);
 }
 
+.px-card {
+  padding-inline: var(--px-card);
+}
+
+.py-card {
+  padding-block: var(--py-card);
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
 .blur {
   width: 100%;
   height: 100%;

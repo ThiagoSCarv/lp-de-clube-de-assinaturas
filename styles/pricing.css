@@ -1,0 +1,149 @@
+#pricing {
+  & header.subtitle {
+    margin-block: 6.5rem 3rem;
+    max-height: fit-content;
+    & h2 {
+      color: var(--text-body);
+      font-size: var(--title-sm);
+      font-weight: var(--fw-bold);
+      text-align: center;
+    }
+  }
+  & .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 6.5rem;
+    & .card {
+      background-color: var(--shape-base);
+      border: 1px solid var(--shape-stroke);
+      border-radius: 1.5rem;
+      height: 25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & header {
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+        height: fit-content;
+      }
+      & h3 {
+        color: var(--blue-light);
+        font-size: var(--title-sx);
+        font-weight: var(--fw-bold);
+        margin-bottom: 1.5rem;
+      }
+      & book-pricing {
+        display: block;
+        font-size: var(--title-md);
+        font-weight: var(--fw-bold);
+        color: var(--text-title);
+        margin-bottom: .5rem;
+        & small {
+          font-size: var(--body-sm);
+        }
+      }
+      & p {
+        color: var(--text-label);
+        font-size: var(--body-sm);
+        font-weight: var(--fw-regular);
+      }
+      ul[role='list'] {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        & li {
+          color: var(--text-body);
+          font-size: var(--body-xs);
+          font-weight: var(--fw-regular);
+          background: url(../assets/icons//Star-Vector.svg) no-repeat;
+          background-position: left;
+          background-size: 2.1rem;
+          padding-left: 2rem;
+        }
+      }
+    }
+    & .semestral {
+      background-color: var(--shape-base);
+      border: 1px solid var(--shape-stroke);
+      border-radius: 1.5rem;
+      height: 25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & header {
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+        height: fit-content;
+        & div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1.5rem;
+          & .tag {
+            color: var(--text-body);
+            font-size: var(--tag);
+            text-transform: uppercase;
+            font-weight: var(--fw-medium);
+            background-color: var(--shape-stroke);
+            padding-block: 0.625rem;
+            padding-inline: 1.25rem;
+            border-radius: 2rem;
+            margin: 0;
+          }
+        }
+      }
+      & h3 {
+        color: var(--pink-light);
+        font-size: var(--title-sx);
+        font-weight: var(--fw-bold);
+      }
+      & book-pricing {
+        display: block;
+        font-size: var(--title-md);
+        font-weight: var(--fw-bold);
+        color: var(--text-title);
+        margin-bottom: .5rem;
+        & small {
+          font-size: var(--body-sm);
+        }
+      }
+      & p {
+        color: var(--text-label);
+        font-size: var(--body-sm);
+        font-weight: var(--fw-regular);
+      }
+      ul[role='list'] {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        & li {
+          color: var(--text-body);
+          font-size: var(--body-xs);
+          font-weight: var(--fw-regular);
+          background: url(../assets/icons/star-purple-vector.svg) no-repeat;
+          background-position: left;
+          background-size: 2.1rem;
+          padding-left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  #pricing {
+    & header {
+      margin-block: 12.125rem 3.5rem;
+    }
+  }
+}
