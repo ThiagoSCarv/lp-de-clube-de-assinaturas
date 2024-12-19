@@ -1,4 +1,5 @@
 #pricing {
+  position: relative;
   & header.subtitle {
     margin-block: 6.5rem 3rem;
     max-height: fit-content;
@@ -13,12 +14,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: fit-content;
+    height: fit-content;
     gap: 1rem;
     margin-bottom: 6.5rem;
     & .card {
       background-color: var(--shape-base);
       border: 1px solid var(--shape-stroke);
       border-radius: 1.5rem;
+      width: 17rem;
       height: 25rem;
       display: flex;
       flex-direction: column;
@@ -51,7 +55,6 @@
         font-weight: var(--fw-regular);
       }
       ul[role='list'] {
-        list-style: none;
         display: flex;
         flex-direction: column;
         gap: .75rem;
@@ -69,18 +72,7 @@
       }
     }
     & .semestral {
-      background-color: var(--shape-base);
-      border: 1px solid var(--shape-stroke);
-      border-radius: 1.5rem;
-      height: 25rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       & header {
-        margin: 0;
-        padding: 0;
-        width: fit-content;
-        height: fit-content;
         & div {
           display: flex;
           align-items: center;
@@ -101,35 +93,10 @@
       }
       & h3 {
         color: var(--pink-light);
-        font-size: var(--title-sx);
-        font-weight: var(--fw-bold);
-      }
-      & book-pricing {
-        display: block;
-        font-size: var(--title-md);
-        font-weight: var(--fw-bold);
-        color: var(--text-title);
-        margin-bottom: .5rem;
-        & small {
-          font-size: var(--body-sm);
-        }
-      }
-      & p {
-        color: var(--text-label);
-        font-size: var(--body-sm);
-        font-weight: var(--fw-regular);
+        margin: 0;
       }
       ul[role='list'] {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: .75rem;
-        justify-content: center;
-        margin-bottom: 1.5rem;
         & li {
-          color: var(--text-body);
-          font-size: var(--body-xs);
-          font-weight: var(--fw-regular);
           background: url(../assets/icons/star-purple-vector.svg) no-repeat;
           background-position: left;
           background-size: 2.1rem;
@@ -142,8 +109,159 @@
 
 @media (width >= 80em) {
   #pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     & header {
       margin-block: 12.125rem 3.5rem;
     }
+    & .cards {
+      margin-block: 5.25rem 19rem;
+      position: relative;
+      & .card {
+        width: 18rem;
+        height: 26rem;
+        border: 0px;
+      }
+      & .card:hover {
+        border: 1px solid var(--shape-stroke);
+        background: var(--shape-hover);
+        box-shadow: 0px 0px 66px rgba(53, 139, 185, 0.1);
+        z-index: 1;
+      }
+      & .stars-top {
+        width: 2rem;
+        height: 3.5rem;
+        position: absolute;
+        left: -340px;
+        top: 55px;
+        transform: translate(900%, -140%);
+        animation: slideRight 3s 200ms ease both, appear 1s both;
+        & img[src*="star-purple-1"] {
+          position: absolute;
+          top: 1px;
+          transition: rotate 1s;
+        }
+        & img[src*="star-purple-2"] {
+          position: absolute;
+          top: 40px;
+          transition: rotate 1s;
+        }
+      }
+      & .stars-top:hover {
+        & img[src*="star-purple-1"] {
+          transform: rotate(-16deg);
+        }
+        & img[src*="star-purple-2"] {
+          transform: rotate(10deg);
+        }
+      }
+      & .mensal {
+        position: absolute;
+        left: -289px;
+        top: 60px;
+        z-index: 0;
+        transform: translate(100%, -14.5%);
+        animation: slideCardRight 3s 200ms ease both, appear 1s both;
+      }
+      & img[src*="Bunny"] {
+        position: absolute;
+        z-index: 1;
+        top: -50px;
+        left: 50px;
+      }
+      & .semestral {
+        position: relative;
+        z-index: 1;
+      }
+      & .anual {
+        position: absolute;
+        left: 289px;
+        top: 60px;
+        z-index: 0;
+        transform: translate(-100%, -14.5%);
+        animation: slideCardLeft 3s 200ms ease both, appear 1s both;
+      }
+      & .stars-bottom {
+        width: 4.5rem;
+        height: 2.5rem;
+        position: absolute;
+        left: 520px;
+        top: 490px;
+        transform: translate(-370%, -170%);
+        animation: slideLeft 3s 200ms ease both, appear 1s both;
+        & img[src*="star-purple-1"] {
+          position: absolute;
+          left: 40px;
+          transform: rotate(16deg);
+        }
+        & img[src*="star-purple-2"] {
+          position: absolute;
+          left: 10px;
+          top: 13px;
+          transform: rotate(16deg);
+        }
+      }
+      & .stars-bottom:hover {
+        & img[src*="star-purple-1"] {
+          transform: rotate(28deg);
+        }
+        & img[src*="star-purple-2"] {
+          transform: rotate(-10deg);
+        }
+      }
+    }
+  }
+
+  @keyframes appear {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideRight {
+    50% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideLeft {
+    50% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideCardRight {
+    50% {
+      transform: translateX(100px);
+      transform: rotate(-8deg);
+    }
+  
+    100% {
+      transform: translateX(0);
+      transform: rotate(-8deg);
+    }
+  }
+
+  @keyframes slideCardLeft {
+    50% {
+      transform: translateX(100px);
+      transform: rotate(8deg);
+    }
+  
+    100% {
+      transform: translateX(0);
+      transform: rotate(8deg);
+    }
   }
 }
+
+
