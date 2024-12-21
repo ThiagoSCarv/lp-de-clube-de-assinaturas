@@ -136,7 +136,9 @@
         left: -340px;
         top: 55px;
         transform: translate(900%, -140%);
-        animation: slideRight 3s 200ms ease both, appear 1s both;
+        animation: slideRight 7s 800ms ease both, appear 1s ease both;
+        animation-timeline: view();
+        animation-range: 0%;
         & img[src*="star-purple-1"] {
           position: absolute;
           top: 1px;
@@ -162,7 +164,9 @@
         top: 60px;
         z-index: 0;
         transform: translate(100%, -14.5%);
-        animation: slideCardRight 3s 200ms ease both, appear 1s both;
+        animation: slideCardRight 7s 800ms ease both, appear 1s ease both;
+        animation-timeline: view();
+        animation-range: 0%;
       }
       & img[src*="Bunny"] {
         position: absolute;
@@ -180,7 +184,9 @@
         top: 60px;
         z-index: 0;
         transform: translate(-100%, -14.5%);
-        animation: slideCardLeft 3s 200ms ease both, appear 1s both;
+        animation: slideCardLeft 7s 800ms ease both, appear 1s ease both;
+        animation-timeline: view();
+        animation-range: 0%;
       }
       & .stars-bottom {
         width: 4.5rem;
@@ -189,7 +195,7 @@
         left: 520px;
         top: 490px;
         transform: translate(-370%, -170%);
-        animation: slideLeft 3s 200ms ease both, appear 1s both;
+        animation: slideLeft 7s 800ms ease both, appear 1s ease both;
         & img[src*="star-purple-1"] {
           position: absolute;
           left: 40px;
